@@ -1,0 +1,82 @@
+---
+title: "How Do We Actually Predict the Weather?"
+author: "Sarah Gauthier"
+date: "2026-01-17"
+categories: [machine-learning, data-science, physics, news]
+image: "climate-modelling.png"
+---
+
+How often do you check the weather forecast when getting ready in the morning? Maybe it determines whether you bike to school or pack an umbrella, or whether you can finally wear the nice open-toe shoes you bought last week. Weather forecasts might feel like a tiny part of your routine, but they actually influence every level of society in big ways. Farmers and gardeners use them to plan for crop irrigation and protection, airlines use them to plan safe flight paths, and cities rely on them to prepare for storms.
+
+But how are these forecasts actually made, and how accurate are they? And how did people predict weather *before* smartphones had built-in Weather apps?
+
+Let's explore how weather forecasting has evolved from early guesswork to modern physics simulations to cutting-edge machine-learning systems that are beginning to outperform traditional methods.
+
+## The Beginnings of Weather Forecast
+
+### Using historical patterns
+
+For most of human history, predicting the weather was a difficult problem: how can you know what the sky will do tomorrow when all you can see if what's happening today? People needed a way to plan farming, travel and safety, but without tools or data there was no reliable method.
+
+Early societies had only one source of information: past experience. If a certain cloud formation usually meant rain, they assumed it would rain that day too. But weather is far more complex than simple patterns.
+
+Around 300 B.C., Chinese astronomers created a calendar that divided the year into 24 "festivals" where each festival was associated with a different type of weather based on centuries of observations. This system helped people understand the rhythm of the seasons (e.g., when rains typically arrived, when temperatures usually dropped, and which weeks were best for planting or harvesting). In other words, it offered a reliable guide for seasonal changes, but it wasn't helpful for prediction day-to-day weather variations.
+
+There was still no way of measuring or quantifying daily observations about the weather. If someone said it felt "hot", that could mean anything depending on the person's experiences or location. Without numbers, scientists couldn't compare one day to another, spot unusual weather patterns and understand long-term trends.
+
+### Measuring the atmosphere using tools
+
+In the 17th century, this problem was solved when instruments to quantify these weather observations were developed. The thermometer, invented by Galileo, allowed precise measurement of temperature. The barometer, developed by Evangelista Torricelli, measured atmospheric pressure. Later, tools for measuring humidity, wind speed and rainfall were also invented. Suddenly weather wasn't just something that was felt, it was something that could be measured, compared and recorded.
+
+![Sketch of the first thermometer invented by Galileo.](galileo-thermometer.jpg){#fig-galileo width=10%}
+
+These innovations were transformative, but they didn’t solve everything. Even though weather data could now be quantified, people still had no way to understand how storms or pressure systems moved from one region to another. Each town or scientist recorded their observations independently, but there was no network or shared database for piecing together a bigger picture of the atmosphere. Weather was becoming measurable, but it was not yet predictable. 
+
+### Creating a map of the atmosphere
+
+In the late 19th century, scientists created synoptic weather maps, which provide a visual representation of atmospheric conditions, including observations of pressure, temperature, winds and precipitation across large areas. For the first time, meteorologists could identify weather patterns and trends.
+
+![Synoptic weather maps that provide representation of atmospheric conditions.](synoptic-map.jpg){#fig-map width=70%}
+
+Even with these maps, predictions still relied on educated guesses. Meteorologists still had to identify patterns by eye. Weather is governed by physical laws—mathematical equations describing how air moves, heats, cools, and carries moisture, but those equations were far too complex for anyone to calculate quickly enough to predict what would happen next.
+
+### Using mathematics to calculate the future
+
+During World War I, accurate weather forecasting became very important for operational planning. Lewis Fry Richardson was the first person to use mathematical calculations to predict the weather. He divided the atmosphere into a grid and tried to calculate how each grid cell changed over time based on physics. It took him six weeks to compute a six-hour forecast by hand. While this was a breakthrough in weather forecasting, it wasn't feasible to apply this to every day predictions due to how long it took to make just one prediction.
+
+### Catching you up to where we are now
+
+Since then evolution of weather forecasting has been significantly influenced by advancements in technology. Weather satellites were developed to provide real-time data about atmospheric conditions and computers with increased computational power were used to numerically solve these complex physics equations. Now, scientists are also exploring the use of machine-learning to further improve and refine weather forecasting.
+
+## Physics-based Numerical Methods
+
+As mentiond above, traditional weather forecasting relies on physics-based numerical methods that approximate solutions to equations that model how air moves and interacts in the atmosphere. These equations, like the famous Navier–Stokes equations for fluid motion, are incredibly detailed, and no computer on Earth can solve them exactly in real time. Instead, modern weather models divide the atmosphere into a giant 3D grid and estimate what’s happening inside each “box” every few seconds. By repeatedly calculating how each box changes and how neighboring boxes interact, the model simulates how a storm could grow, how a cold front might move, or how clouds form and disappear.
+
+![Illustration of climate modelling by dividing the atmosphere into a giant 3D grid.](climate-modelling.png){#fig-climate-model width=50%}
+
+But there’s a challenge with this method: even tiny uncertainties in the initial data, such as the temperature being off by just a tenth of a degree, can lead to major differences as the forecast progresses. Even with modern measurement tools, we can't always quantify the current state of the weather perfectly due to its ever-changing nature. There is also a lot going on behind the scenes that we are still not able to properly quantify, but that could impact future weather conditions. To manage this, meteorologists use what we call **probabilistic or ensemble forecasting**. This involves numerically solving the equations with dozens of slightly different initial conditions. This method produces what's often called a "spaghetti plot", as shown in @fig-spag-plot, where each line represents one possible future.
+
+![Spaghetti plots from the NOAA showing examples of two ensemble solutions. The left plot shows high clustering of solutionss resulting in high confidence, while the right plot shows a lot of very different possible outcomes, reducing confidence.](spaghetti-plot.png){#fig-spag-plot width=70%}
+
+Looking at all these lines together helps forecasters understand not just the most likely weather outcome, but also the range of other possibilities and how confident they can be in their prediction. This allows them to quantify the uncertainty associated with their predictions.
+
+Numerical methods that use ensemble predictions include the European Centre for Medium-Range Weather Forecasts (ECWMF)'s ENS and NOAA's GEFS.
+
+## Machine-Learning Methods
+
+Recent breakthroughs in machine learning have shown that these ML models can predict weather faster and sometimes more accurately than physics-based systems. This is a big change from the physics-based methods because these ML models know nothing about the physics underlying these systems. They have never seen the equations governing the atmosphere, they are only provided data about them and learn how to manipulate this data in a way that gives an accurate output. Instead of calculating how air should behave based on physics models, ML models learn how the atmosphere actually does behave by studying millions of examples of past weather. Early versions of these models made impressive single forecasts, but they had a major flaw: they struggled to estimate uncertainty associated with their predictions, something essential for real-world decision-making. 
+
+That changed with the arrival of Google’s Weather Next 2 in 2025. This model introduced a new type of architecture called a Functional Generative Network (FGN), which works a bit like a creative prediction engine. After learning global weather patterns from satellite images, radar, and decades of reanalysis data (historical weather reconstructed using physics models), the model compresses the state of the atmosphere into a compact representation made up of 1s and 0s, which represents the key structures in the atmosphere's current state. Then, instead of giving just one prediction from this, the model injects small amounts of controlled randomness into the input, allowing it to generate multiple realistic future scenarios. The key is that the randomness isn’t chaotic, it creates natural-looking variations, similar to what you’d expect from real weather systems. 
+
+![Example of the architecture of a neural network model.](neural-net.png){#fig-neural-net width=60%}
+
+This makes the model behave more like a traditional ensemble forecast but at significantly higher resolution and much faster speeds (8x faster). As a result, machine-learning forecasts are becoming incredibly competitive, especially for predicting local storms, hour-by-hour changes, and high-resolution short-term weather, areas where pure physics models often struggle.
+
+Breakthroughs like this could reshape how industries plan for weather‑related risks and help individuals make more informed choices. It could also mean that in the future, you might avoid getting caught in that unexpected rainstorm.
+
+## References
+- [https://www.mhweather.co.uk/the-history-of-weather-forecasting-and-meteorology-from-ancient-observations-to-modern-science/](https://www.mhweather.co.uk/the-history-of-weather-forecasting-and-meteorology-from-ancient-observations-to-modern-science/)
+- [https://science.nasa.gov/earth/earth-observatory/weather-forecasting-through-the-ages/](https://science.nasa.gov/earth/earth-observatory/weather-forecasting-through-the-ages/)
+- [https://deepmind.google/science/weathernext/](https://deepmind.google/science/weathernext/)
+- [https://www.weather.gov/media/ajk/brochures/NumericalWeatherPrediction.pdf](https://www.weather.gov/media/ajk/brochures/NumericalWeatherPrediction.pdf)
+- [https://www.nature.com/articles/s41586-024-08252-9](https://www.nature.com/articles/s41586-024-08252-9)
