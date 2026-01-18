@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Sarah Gauthier">
+<meta name="dcterms.date" content="2026-01-17">
 
-<title>blog</title>
+<title>How Do We Actually Predict the Weather? – blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dfb324f25d9b1687192fa8be62ac8f9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-dfb324f25d9b1687192fa8be62ac8f9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">blog</span>
     </a>
   </div>
@@ -150,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -173,78 +115,158 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">How Do We Actually Predict the Weather?</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">data-science</div>
+                <div class="quarto-category">physics</div>
+                <div class="quarto-category">news</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Sarah Gauthier </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 17, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YS1zY2llbmNl">data-science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZS1sZWFybmluZw==">machine-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGh5c2ljcw==">physics <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bWFjaGluZS1sZWFybmluZyUyQ2RhdGEtc2NpZW5jZSUyQ3BoeXNpY3MlMkNuZXdz" data-listing-date-sort="1768636800000" data-listing-file-modified-sort="1768698239768" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1468">
-<div class="thumbnail"><a href="./posts/post-weather-forecasting/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/post-weather-forecasting/climate-modelling.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-weather-forecasting/index.html" class="no-external">How Do We Actually Predict the Weather?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZS1sZWFybmluZw=='); return false;">machine-learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS1zY2llbmNl'); return false;">data-science</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGh5c2ljcw=='); return false;">physics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
+<p>How often do you check the weather forecast when getting ready in the morning? Maybe it determines whether you bike to school or pack an umbrella, or whether you can finally wear the nice open-toe shoes you bought last week. Weather forecasts might feel like a tiny part of your routine, but they actually influence every level of society in big ways. Farmers and gardeners use them to plan for crop irrigation and protection, airlines use them to plan safe flight paths, and cities rely on them to prepare for storms.</p>
+<p>But how are these forecasts actually made, and how accurate are they? And how did people predict weather <em>before</em> smartphones had built-in Weather apps?</p>
+<p>Let’s explore how weather forecasting has evolved from early guesswork to modern physics simulations to cutting-edge machine-learning systems that are beginning to outperform traditional methods.</p>
+<section id="the-beginnings-of-weather-forecast" class="level2">
+<h2 class="anchored" data-anchor-id="the-beginnings-of-weather-forecast">The Beginnings of Weather Forecast</h2>
+<section id="using-historical-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="using-historical-patterns">Using historical patterns</h3>
+<p>For most of human history, predicting the weather was a difficult problem: how can you know what the sky will do tomorrow when all you can see if what’s happening today? People needed a way to plan farming, travel and safety, but without tools or data there was no reliable method.</p>
+<p>Early societies had only one source of information: past experience. If a certain cloud formation usually meant rain, they assumed it would rain that day too. But weather is far more complex than simple patterns.</p>
+<p>Around 300 B.C., Chinese astronomers created a calendar that divided the year into 24 “festivals” where each festival was associated with a different type of weather based on centuries of observations. This system helped people understand the rhythm of the seasons (e.g., when rains typically arrived, when temperatures usually dropped, and which weeks were best for planting or harvesting). In other words, it offered a reliable guide for seasonal changes, but it wasn’t helpful for prediction day-to-day weather variations.</p>
+<p>There was still no way of measuring or quantifying daily observations about the weather. If someone said it felt “hot”, that could mean anything depending on the person’s experiences or location. Without numbers, scientists couldn’t compare one day to another, spot unusual weather patterns and understand long-term trends.</p>
+</section>
+<section id="measuring-the-atmosphere-using-tools" class="level3">
+<h3 class="anchored" data-anchor-id="measuring-the-atmosphere-using-tools">Measuring the atmosphere using tools</h3>
+<p>In the 17th century, this problem was solved when instruments to quantify these weather observations were developed. The thermometer, invented by Galileo, allowed precise measurement of temperature. The barometer, developed by Evangelista Torricelli, measured atmospheric pressure. Later, tools for measuring humidity, wind speed and rainfall were also invented. Suddenly weather wasn’t just something that was felt, it was something that could be measured, compared and recorded.</p>
+<div id="fig-galileo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-galileo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="galileo-thermometer.jpg" class="img-fluid figure-img" style="width:10.0%">
 </div>
-<div class="delink listing-description"><a href="./posts/post-weather-forecasting/index.html" class="no-external">
-How often do you check the weather forecast when getting ready in the morning? Maybe it determines whether you bike to school or pack an umbrella, or whether you can finally…
-</a></div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-galileo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Sketch of the first thermometer invented by Galileo.
+</figcaption>
+</figure>
 </div>
-<div class="metadata">
-<a href="./posts/post-weather-forecasting/index.html" class="no-external">
-<div class="listing-date">
-Jan 17, 2026
+<p>These innovations were transformative, but they didn’t solve everything. Even though weather data could now be quantified, people still had no way to understand how storms or pressure systems moved from one region to another. Each town or scientist recorded their observations independently, but there was no network or shared database for piecing together a bigger picture of the atmosphere. Weather was becoming measurable, but it was not yet predictable.</p>
+</section>
+<section id="creating-a-map-of-the-atmosphere" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-map-of-the-atmosphere">Creating a map of the atmosphere</h3>
+<p>In the late 19th century, scientists created synoptic weather maps, which provide a visual representation of atmospheric conditions, including observations of pressure, temperature, winds and precipitation across large areas. For the first time, meteorologists could identify weather patterns and trends.</p>
+<div id="fig-map" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="synoptic-map.jpg" class="img-fluid figure-img" style="width:70.0%">
 </div>
-<div class="listing-author">
-Sarah Gauthier
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Synoptic weather maps that provide representation of atmospheric conditions.
+</figcaption>
+</figure>
 </div>
-</a>
+<p>Even with these maps, predictions still relied on educated guesses. Meteorologists still had to identify patterns by eye. Weather is governed by physical laws—mathematical equations describing how air moves, heats, cools, and carries moisture, but those equations were far too complex for anyone to calculate quickly enough to predict what would happen next.</p>
+</section>
+<section id="using-mathematics-to-calculate-the-future" class="level3">
+<h3 class="anchored" data-anchor-id="using-mathematics-to-calculate-the-future">Using mathematics to calculate the future</h3>
+<p>During World War I, accurate weather forecasting became very important for operational planning. Lewis Fry Richardson was the first person to use mathematical calculations to predict the weather. He divided the atmosphere into a grid and tried to calculate how each grid cell changed over time based on physics. It took him six weeks to compute a six-hour forecast by hand. While this was a breakthrough in weather forecasting, it wasn’t feasible to apply this to every day predictions due to how long it took to make just one prediction.</p>
+</section>
+<section id="catching-you-up-to-where-we-are-now" class="level3">
+<h3 class="anchored" data-anchor-id="catching-you-up-to-where-we-are-now">Catching you up to where we are now</h3>
+<p>Since then evolution of weather forecasting has been significantly influenced by advancements in technology. Weather satellites were developed to provide real-time data about atmospheric conditions and computers with increased computational power were used to numerically solve these complex physics equations. Now, scientists are also exploring the use of machine-learning to further improve and refine weather forecasting.</p>
+</section>
+</section>
+<section id="physics-based-numerical-methods" class="level2">
+<h2 class="anchored" data-anchor-id="physics-based-numerical-methods">Physics-based Numerical Methods</h2>
+<p>As mentiond above, traditional weather forecasting relies on physics-based numerical methods that approximate solutions to equations that model how air moves and interacts in the atmosphere. These equations, like the famous Navier–Stokes equations for fluid motion, are incredibly detailed, and no computer on Earth can solve them exactly in real time. Instead, modern weather models divide the atmosphere into a giant 3D grid and estimate what’s happening inside each “box” every few seconds. By repeatedly calculating how each box changes and how neighboring boxes interact, the model simulates how a storm could grow, how a cold front might move, or how clouds form and disappear.</p>
+<div id="fig-climate-model" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-climate-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="climate-modelling.png" class="img-fluid figure-img" style="width:50.0%">
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-climate-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Illustration of climate modelling by dividing the atmosphere into a giant 3D grid.
+</figcaption>
+</figure>
 </div>
+<p>But there’s a challenge with this method: even tiny uncertainties in the initial data, such as the temperature being off by just a tenth of a degree, can lead to major differences as the forecast progresses. Even with modern measurement tools, we can’t always quantify the current state of the weather perfectly due to its ever-changing nature. There is also a lot going on behind the scenes that we are still not able to properly quantify, but that could impact future weather conditions. To manage this, meteorologists use what we call <strong>probabilistic or ensemble forecasting</strong>. This involves numerically solving the equations with dozens of slightly different initial conditions. This method produces what’s often called a “spaghetti plot”, as shown in <a href="#fig-spag-plot" class="quarto-xref">Figure&nbsp;4</a>, where each line represents one possible future.</p>
+<div id="fig-spag-plot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spag-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="spaghetti-plot.png" class="img-fluid figure-img" style="width:70.0%">
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spag-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Spaghetti plots from the NOAA showing examples of two ensemble solutions. The left plot shows high clustering of solutionss resulting in high confidence, while the right plot shows a lot of very different possible outcomes, reducing confidence.
+</figcaption>
+</figure>
+</div>
+<p>Looking at all these lines together helps forecasters understand not just the most likely weather outcome, but also the range of other possibilities and how confident they can be in their prediction. This allows them to quantify the uncertainty associated with their predictions.</p>
+<p>Numerical methods that use ensemble predictions include the European Centre for Medium-Range Weather Forecasts (ECWMF)’s ENS and NOAA’s GEFS.</p>
+</section>
+<section id="machine-learning-methods" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-methods">Machine-Learning Methods</h2>
+<p>Recent breakthroughs in machine learning have shown that these ML models can predict weather faster and sometimes more accurately than physics-based systems. This is a big change from the physics-based methods because these ML models know nothing about the physics underlying these systems. They have never seen the equations governing the atmosphere, they are only provided data about them and learn how to manipulate this data in a way that gives an accurate output. Instead of calculating how air should behave based on physics models, ML models learn how the atmosphere actually does behave by studying millions of examples of past weather. Early versions of these models made impressive single forecasts, but they had a major flaw: they struggled to estimate uncertainty associated with their predictions, something essential for real-world decision-making.</p>
+<p>That changed with the arrival of Google’s Weather Next 2 in 2025. This model introduced a new type of architecture called a Functional Generative Network (FGN), which works a bit like a creative prediction engine. After learning global weather patterns from satellite images, radar, and decades of reanalysis data (historical weather reconstructed using physics models), the model compresses the state of the atmosphere into a compact representation made up of 1s and 0s, which represents the key structures in the atmosphere’s current state. Then, instead of giving just one prediction from this, the model injects small amounts of controlled randomness into the input, allowing it to generate multiple realistic future scenarios. The key is that the randomness isn’t chaotic, it creates natural-looking variations, similar to what you’d expect from real weather systems.</p>
+<div id="fig-neural-net" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-neural-net-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="neural-net.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-neural-net-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Example of the architecture of a neural network model.
+</figcaption>
+</figure>
+</div>
+<p>This makes the model behave more like a traditional ensemble forecast but at significantly higher resolution and much faster speeds (8x faster). As a result, machine-learning forecasts are becoming incredibly competitive, especially for predicting local storms, hour-by-hour changes, and high-resolution short-term weather, areas where pure physics models often struggle.</p>
+<p>Breakthroughs like this could reshape how industries plan for weather‑related risks and help individuals make more informed choices. It could also mean that in the future, you might avoid getting caught in that unexpected rainstorm.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><a href="https://www.mhweather.co.uk/the-history-of-weather-forecasting-and-meteorology-from-ancient-observations-to-modern-science/">https://www.mhweather.co.uk/the-history-of-weather-forecasting-and-meteorology-from-ancient-observations-to-modern-science/</a></li>
+<li><a href="https://science.nasa.gov/earth/earth-observatory/weather-forecasting-through-the-ages/">https://science.nasa.gov/earth/earth-observatory/weather-forecasting-through-the-ages/</a></li>
+<li><a href="https://deepmind.google/science/weathernext/">https://deepmind.google/science/weathernext/</a></li>
+<li><a href="https://www.weather.gov/media/ajk/brochures/NumericalWeatherPrediction.pdf">https://www.weather.gov/media/ajk/brochures/NumericalWeatherPrediction.pdf</a></li>
+<li><a href="https://www.nature.com/articles/s41586-024-08252-9">https://www.nature.com/articles/s41586-024-08252-9</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
